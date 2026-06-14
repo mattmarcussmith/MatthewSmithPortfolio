@@ -1,0 +1,77 @@
+.education-section {
+  background: #080808;
+  padding: 96px 48px;
+}
+
+.education-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  margin: 0 0 16px 0;
+  color: #9c9c9c;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.education-container h2 {
+  max-width: 760px;
+  margin: 0 0 40px 0;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.degree-image-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.degree-image {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid #242424;
+  border-radius: 14px;
+  background: #101010;
+}
+
+.education-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #242424;
+}
+
+  .education-list li {
+    color: #c7c7c7;
+    font-size: 17px;
+    line-height: 1.6;
+    padding: 16px 0;
+    border-bottom: 1px solid #242424;
+  }
+
+@media (max-width: 900px) {
+  .education-section {
+    padding: 72px 24px;
+  }
+
+  .degree-image-row {
+    grid-template-columns: 1fr;
+  }
+
+  .education-container h2 {
+    font-size: 32px;
+  }
+
+  .degree-image {
+    height: auto;
+  }
+}
