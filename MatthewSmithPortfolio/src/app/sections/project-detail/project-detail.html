@@ -6,15 +6,21 @@
 
     <div class="project-detail-header">
       <div>
-        <h2>
-          Workforce Operations Platform
+        <h2 class="project-detail-title">
+          <span class="project-logo-mark">
+            <span class="project-logo-mark-lines">E</span><span class="project-logo-mark-letter">P</span>
+          </span>
+
+          <span class="project-title-text">
+            Employee Portal
+          </span>
         </h2>
 
         <p class="project-detail-summary">
-          A focused internal workforce application for HR and department managers
-          to manage employee records, department structure, job titles, work
-          status, leave requests, access roles, and audit history from one
-          centralized system.
+          An enterprise HRIS application for HR teams and department managers to securely
+          centralize employee records, manage onboarding, maintain department assignments,
+          track emergency contacts, assign employee skills, enforce role-based access, and
+          support controlled employee offboarding from one centralized system.
         </p>
       </div>
 
@@ -36,12 +42,14 @@
         </h3>
 
         <ul>
-          <li>Centralized employee record management</li>
-          <li>Department and job title organization</li>
-          <li>Work status tracking for active, onboarding, on leave, inactive, and terminated employees</li>
-          <li>Leave request submission, approval, rejection, and history</li>
-          <li>Role-based access for HR admins, managers, and viewers</li>
-          <li>Audit history for important workforce record changes</li>
+          <li>Centralized employee profile and workforce record management</li>
+          <li>Structured onboarding for new employee creation</li>
+          <li>Department, manager, and organizational assignment tracking</li>
+          <li>Emergency contact management for employee safety records</li>
+          <li>Employee skill tracking for workforce visibility</li>
+          <li>Role-based access for HR administrators and employees</li>
+          <li>Controlled offboarding through employee deactivation</li>
+          <li>Audit visibility for employee record creation and updates</li>
         </ul>
       </div>
 
@@ -51,18 +59,20 @@
         </h3>
 
         <ul>
-          <li>Angular frontend with strongly typed models</li>
+          <li>Angular frontend with strongly typed DTO-aligned models</li>
+          <li>Angular Material forms, dialogs, and UI controls</li>
+          <li>AG-Grid employee directory with paging, sorting, and search</li>
           <li>ASP.NET Core Web API backend</li>
           <li>Controller to Service to DbContext architecture</li>
           <li>DTO-based request and response contracts</li>
-          <li>EF Core Code First with SQLite</li>
-          <li>Microsoft Entra ID authentication</li>
-          <li>Postman authentication validation</li>
+          <li>FluentValidation business rule validation</li>
+          <li>EF Core Code First with SQLite migrations</li>
+          <li>Microsoft Entra ID authentication and role-based authorization</li>
+          <li>Serilog structured logging and sensitive-data logging restrictions</li>
           <li>Swagger/OpenAPI endpoint testing</li>
+          <li>Postman authentication validation</li>
         </ul>
       </div>
     </div>
-
-   
   </div>
 </section>
