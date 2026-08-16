@@ -1,185 +1,602 @@
 .project-detail-section {
-  background: #050505;
-  padding: 96px 48px;
+  position: relative;
+
+  padding: 110px 48px;
+
+  background:
+    radial-gradient(
+      circle at 85% 12%,
+      rgba(255, 54, 33, 0.05),
+      transparent 25%
+    ),
+    #050505;
+}
+
+.project-detail-section *,
+.project-detail-section *::before,
+.project-detail-section *::after {
+  box-sizing: border-box;
 }
 
 .project-detail-container {
+  width: 100%;
   max-width: 1120px;
+
   margin: 0 auto;
 }
 
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
 .project-detail-header {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 48px;
-  align-items: start;
-  margin-bottom: 40px;
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-bottom: 70px;
+}
+
+.project-detail-heading {
+  max-width: 760px;
 }
 
 .project-detail-title {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin: 0 0 24px 0;
-}
+  margin: 0;
 
-.project-logo-mark {
-  display: inline-flex;
-  align-items: center;
-  font-size: 42px;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -0.12em;
-}
-
-.project-logo-mark-lines,
-.project-logo-mark-letter {
-  display: inline-block;
-  transform: skewX(-10deg);
-}
-
-.project-logo-mark-lines {
-  color: #2f80ed;
-  margin-right: -0.06em;
-}
-
-.project-logo-mark-letter {
   color: #ffffff;
-}
 
-.project-title-text {
-  color: #ffffff;
-  font-size: 40px;
-  line-height: 1.15;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.12;
+
   font-weight: 700;
-  letter-spacing: 0.02em;
+
+  letter-spacing: -0.025em;
 }
 
 .project-detail-summary {
-  max-width: 760px;
-  margin: 0;
-  color: #c7c7c7;
-  font-size: 18px;
+  max-width: 720px;
+
+  margin: 20px 0 0;
+
+  color: #aeb0b4;
+
+  font-size: 15px;
   line-height: 1.75;
 }
 
 .project-detail-actions {
+  flex-shrink: 0;
+}
+
+
+/* ============================================================
+   DETAIL SECTIONS
+   ============================================================ */
+
+.detail-section-block {
+  padding: 42px 0;
+
+  border-top: 1px solid #222222;
+}
+
+.detail-section-heading {
+  max-width: 680px;
+
+  margin-bottom: 30px;
+}
+
+.detail-label {
+  margin: 0 0 8px;
+
+  color: #ff5b46;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.detail-section-heading h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.detail-section-heading > p:last-child {
+  margin: 12px 0 0;
+
+  color: #a7a7a7;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* ============================================================
+   ARCHITECTURE DIAGRAM
+   ============================================================ */
+
+.architecture-diagram {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr
+    auto
+    1fr
+    auto
+    1fr;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.architecture-node {
+  min-width: 0;
+  min-height: 165px;
+
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  min-width: 190px;
+
+  padding: 18px;
+
+  background: #0a0a0a;
+
+  border: 1px solid #282828;
+  border-radius: 10px;
 }
 
-.primary-action,
-.secondary-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 0 18px;
-  border-radius: 4px;
-  font-size: 15px;
+.architecture-node-number {
+  margin-bottom: 18px;
+
+  color: #666666;
+
+  font-size: 9px;
   font-weight: 700;
-  text-decoration: none;
-  white-space: nowrap;
+
+  letter-spacing: 0.08em;
 }
 
-.primary-action {
-  background: #f5f5f5;
-  color: #050505;
+.architecture-node strong {
+  margin-bottom: 10px;
+
+  color: #ffffff;
+
+  font-size: 14px;
 }
 
-.secondary-action {
-  border: 1px solid #3a3a3a;
-  color: #f5f5f5;
+.architecture-node > span:not(.architecture-node-number) {
+  margin-top: 5px;
+
+  color: #8f8f8f;
+
+  font-size: 10px;
+  line-height: 1.4;
 }
 
-  .secondary-action:hover {
-    border-color: #f5f5f5;
-  }
+.bronze-node {
+  border-top-color: #b87333;
+}
+
+.silver-node {
+  border-top-color: #a8a8a8;
+}
+
+.gold-node {
+  border-top-color: #d4af37;
+}
+
+.architecture-arrow {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #666666;
+}
+
+.architecture-arrow span {
+  font-size: 20px;
+}
+
+.architecture-arrow small {
+  color: #666666;
+
+  font-size: 8px;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   PROCESS CARDS
+   ============================================================ */
+
+.process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.process-card {
+  padding: 20px;
+
+  background: #090909;
+
+  border: 1px solid #272727;
+  border-radius: 10px;
+}
+
+.process-number {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #ff5b46;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.process-card h4 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+}
+
+.process-card p {
+  margin: 0;
+
+  color: #969696;
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   DATA MODEL
+   ============================================================ */
+
+.data-model {
+  display: grid;
+
+  grid-template-columns:
+    minmax(170px, 1fr)
+    80px
+    minmax(190px, 1.2fr)
+    80px
+    minmax(170px, 1fr);
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.model-table {
+  overflow: hidden;
+
+  background: #090909;
+
+  border: 1px solid #292929;
+  border-radius: 8px;
+}
+
+.model-table-header {
+  padding: 12px 14px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  background: #111111;
+
+  border-bottom: 1px solid #292929;
+}
+
+.fact-table {
+  border-color:
+    rgba(255, 54, 33, 0.35);
+}
+
+.fact-table .model-table-header {
+  background:
+    rgba(255, 54, 33, 0.07);
+}
+
+.model-field {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 9px 14px;
+
+  color: #aaaaaa;
+
+  font-size: 10px;
+
+  border-bottom: 1px solid #202020;
+}
+
+.model-field:last-child {
+  border-bottom: none;
+}
+
+.model-field span {
+  color: #666666;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.primary-key {
+  color: #f4f4f4;
+}
+
+.foreign-key {
+  color: #c5c5c5;
+}
+
+.model-relationship {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #777777;
+
+  font-size: 10px;
+}
+
+.relationship-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: #454545;
+}
+
+
+/* ============================================================
+   JOB WORKFLOW
+   ============================================================ */
+
+.job-workflow {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr
+    auto
+    1fr
+    auto
+    1fr;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.job-node {
+  min-height: 82px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 14px;
+
+  background: #090909;
+
+  border: 1px solid #292929;
+  border-radius: 8px;
+}
+
+.job-node span {
+  margin-bottom: 6px;
+
+  color: #ff5b46;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.job-node strong {
+  color: #e8e8e8;
+
+  font-size: 11px;
+}
+
+.job-arrow {
+  color: #666666;
+
+  font-size: 18px;
+}
+
+
+/* ============================================================
+   BOTTOM DETAILS
+   ============================================================ */
 
 .project-detail-panel {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  background: #101010;
-  border: 1px solid #242424;
-  border-radius: 16px;
-  overflow: hidden;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-top: 42px;
 }
 
 .detail-column {
-  padding: 32px;
+  padding: 26px;
+
+  background: #090909;
+
+  border: 1px solid #272727;
+  border-radius: 10px;
 }
 
-  .detail-column:first-child {
-    border-right: 1px solid #242424;
-  }
+.detail-column h3 {
+  margin: 0 0 18px;
 
-  .detail-column h3 {
-    margin: 0 0 18px 0;
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 700;
-  }
+  color: #ffffff;
 
-  .detail-column ul {
-    margin: 0;
-    padding-left: 20px;
-  }
-
-  .detail-column li {
-    color: #b8b8b8;
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 8px;
-  }
-
-    .detail-column li:last-child {
-      margin-bottom: 0;
-    }
-
-.disabled-action {
-  opacity: 0.55;
-  cursor: default;
-  pointer-events: none;
+  font-size: 17px;
 }
+
+.detail-column ul {
+  margin: 0;
+
+  padding-left: 18px;
+}
+
+.detail-column li {
+  margin-bottom: 9px;
+
+  color: #a9a9a9;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
 
 @media (max-width: 900px) {
   .project-detail-section {
-    padding: 72px 24px;
+    padding: 88px 24px;
   }
 
   .project-detail-header {
-    grid-template-columns: 1fr;
-    gap: 28px;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin-bottom: 54px;
   }
 
-  .project-detail-title {
-    align-items: flex-start;
-    flex-direction: column;
+  .architecture-diagram {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .architecture-arrow {
+    transform: rotate(90deg);
+
+    height: 26px;
+
+    justify-content: center;
+  }
+
+  .architecture-arrow small {
+    display: none;
+  }
+
+  .architecture-node {
+    min-height: auto;
+  }
+
+  .process-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .data-model {
+    grid-template-columns: 1fr;
+
     gap: 10px;
   }
 
-  .project-logo-mark {
-    font-size: 38px;
+  .model-relationship {
+    justify-content: center;
+
+    transform: rotate(90deg);
+
+    height: 35px;
   }
 
-  .project-title-text {
-    font-size: 32px;
+  .model-relationship .relationship-line {
+    max-width: 30px;
+  }
+
+  .job-workflow {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .job-arrow {
+    text-align: center;
+
+    transform: rotate(90deg);
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+  .project-detail-section {
+    padding: 72px 16px;
+  }
+
+  .project-detail-title {
+    font-size: 30px;
+  }
+
+  .project-detail-summary {
+    font-size: 13px;
   }
 
   .project-detail-actions {
-    flex-direction: row;
-    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .project-detail-actions .primary-action {
+    width: 100%;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
   }
 
   .project-detail-panel {
     grid-template-columns: 1fr;
   }
 
-  .detail-column:first-child {
-    border-right: none;
-    border-bottom: 1px solid #242424;
+  .detail-column {
+    padding: 20px;
   }
 }

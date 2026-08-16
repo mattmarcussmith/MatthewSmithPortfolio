@@ -1,72 +1,446 @@
 <section id="project-detail" class="project-detail-section">
   <div class="project-detail-container">
+
     <p class="section-eyebrow">
       Project Details
     </p>
 
+    <!-- HEADER -->
     <div class="project-detail-header">
-      <div>
-        <h2 class="project-detail-title">
-          <span class="project-logo-mark">
-            <span class="project-logo-mark-lines">Ops</span><span class="project-logo-mark-letter">Flow</span>
-          </span>
 
-          <span class="project-title-text">
-            OpsFlow Platform
-          </span>
+      <div class="project-detail-heading">
+        <h2 class="project-detail-title">
+          Retail Lakehouse ETL Pipeline
         </h2>
 
         <p class="project-detail-summary">
-          OpsFlow Platform is an enterprise workflow system for managing internal operational work
-          through structured items that progress through configurable states such as Draft, In Review,
-          Approved, Rejected, and Completed. It unifies approvals, tasks, and operational tracking into a single system.
+          An end-to-end Databricks data engineering project that ingests raw retail
+          data, transforms and validates records through Bronze and Silver layers,
+          and produces curated Gold datasets for analytics and reporting.
         </p>
       </div>
 
+      <!-- ONLY GITHUB -->
       <div class="project-detail-actions">
-        <a href="#project-detail" class="primary-action disabled-action">
-          GitHub Repository Coming Soon
-        </a>
+        <a
+          href="https://github.com/mattmarcussmith"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="primary-action">
 
-        <a href="#project-detail" class="secondary-action disabled-action">
-          Live Demo Coming Soon
+          GitHub Repository
         </a>
       </div>
+
     </div>
+
+
+    <!-- =====================================================
+         ARCHITECTURE
+         ===================================================== -->
+
+    <div class="detail-section-block">
+
+      <div class="detail-section-heading">
+        <p class="detail-label">01 / Architecture</p>
+
+        <h3>
+          End-to-End Data Flow
+        </h3>
+
+        <p>
+          Source datasets move through ingestion, cleansing, transformation,
+          validation, and aggregation before becoming analytics-ready datasets.
+        </p>
+      </div>
+
+
+      <div class="architecture-diagram">
+
+        <!-- SOURCES -->
+        <div class="architecture-node source-node">
+          <span class="architecture-node-number">01</span>
+
+          <strong>Source Data</strong>
+
+          <span>customers.csv</span>
+          <span>products.csv</span>
+          <span>orders.csv</span>
+        </div>
+
+
+        <div class="architecture-arrow">
+          <span>→</span>
+          <small>Ingest</small>
+        </div>
+
+
+        <!-- BRONZE -->
+        <div class="architecture-node bronze-node">
+          <span class="architecture-node-number">02</span>
+
+          <strong>Bronze</strong>
+
+          <span>Raw Delta Tables</span>
+          <span>Ingestion Timestamp</span>
+          <span>Source Preservation</span>
+        </div>
+
+
+        <div class="architecture-arrow">
+          <span>→</span>
+          <small>Transform</small>
+        </div>
+
+
+        <!-- SILVER -->
+        <div class="architecture-node silver-node">
+          <span class="architecture-node-number">03</span>
+
+          <strong>Silver</strong>
+
+          <span>Clean Records</span>
+          <span>Validate Types</span>
+          <span>Deduplicate</span>
+        </div>
+
+
+        <div class="architecture-arrow">
+          <span>→</span>
+          <small>Curate</small>
+        </div>
+
+
+        <!-- GOLD -->
+        <div class="architecture-node gold-node">
+          <span class="architecture-node-number">04</span>
+
+          <strong>Gold</strong>
+
+          <span>Sales Analytics</span>
+          <span>Customer Metrics</span>
+          <span>Product Performance</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         PIPELINE PROCESS
+         ===================================================== -->
+
+    <div class="detail-section-block">
+
+      <div class="detail-section-heading">
+        <p class="detail-label">02 / ETL Workflow</p>
+
+        <h3>
+          Pipeline Processing
+        </h3>
+
+        <p>
+          The project separates each major data engineering responsibility into
+          clear processing stages that can be executed and monitored independently.
+        </p>
+      </div>
+
+
+      <div class="process-grid">
+
+        <article class="process-card">
+          <span class="process-number">01</span>
+
+          <h4>Ingest</h4>
+
+          <p>
+            Load source files into Bronze Delta tables while preserving raw
+            records and adding ingestion metadata.
+          </p>
+        </article>
+
+
+        <article class="process-card">
+          <span class="process-number">02</span>
+
+          <h4>Validate</h4>
+
+          <p>
+            Check required fields, data types, null values, duplicate records,
+            and invalid source data.
+          </p>
+        </article>
+
+
+        <article class="process-card">
+          <span class="process-number">03</span>
+
+          <h4>Transform</h4>
+
+          <p>
+            Clean records, standardize values, join related datasets, and build
+            reusable Silver tables.
+          </p>
+        </article>
+
+
+        <article class="process-card">
+          <span class="process-number">04</span>
+
+          <h4>Aggregate</h4>
+
+          <p>
+            Create Gold datasets containing business-level metrics and
+            analytics-ready summaries.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         DATA MODEL
+         ===================================================== -->
+
+    <div class="detail-section-block">
+
+      <div class="detail-section-heading">
+        <p class="detail-label">03 / Data Modeling</p>
+
+        <h3>
+          Retail Analytics Model
+        </h3>
+
+        <p>
+          The curated layer uses a simple analytics model centered around order
+          facts with customer and product dimensions.
+        </p>
+      </div>
+
+
+      <div class="data-model">
+
+        <!-- CUSTOMER -->
+        <div class="model-table dimension-table">
+
+          <div class="model-table-header">
+            dim_customer
+          </div>
+
+          <div class="model-field primary-key">
+            customer_id
+            <span>PK</span>
+          </div>
+
+          <div class="model-field">
+            customer_name
+          </div>
+
+          <div class="model-field">
+            email
+          </div>
+
+          <div class="model-field">
+            region
+          </div>
+
+        </div>
+
+
+        <!-- RELATIONSHIP -->
+        <div class="model-relationship">
+          <span>1</span>
+
+          <div class="relationship-line"></div>
+
+          <span>∞</span>
+        </div>
+
+
+        <!-- FACT -->
+        <div class="model-table fact-table">
+
+          <div class="model-table-header">
+            fact_orders
+          </div>
+
+          <div class="model-field primary-key">
+            order_id
+            <span>PK</span>
+          </div>
+
+          <div class="model-field foreign-key">
+            customer_id
+            <span>FK</span>
+          </div>
+
+          <div class="model-field foreign-key">
+            product_id
+            <span>FK</span>
+          </div>
+
+          <div class="model-field">
+            order_date
+          </div>
+
+          <div class="model-field">
+            quantity
+          </div>
+
+          <div class="model-field">
+            unit_price
+          </div>
+
+          <div class="model-field">
+            sales_amount
+          </div>
+
+        </div>
+
+
+        <!-- RELATIONSHIP -->
+        <div class="model-relationship">
+          <span>∞</span>
+
+          <div class="relationship-line"></div>
+
+          <span>1</span>
+        </div>
+
+
+        <!-- PRODUCT -->
+        <div class="model-table dimension-table">
+
+          <div class="model-table-header">
+            dim_product
+          </div>
+
+          <div class="model-field primary-key">
+            product_id
+            <span>PK</span>
+          </div>
+
+          <div class="model-field">
+            product_name
+          </div>
+
+          <div class="model-field">
+            category
+          </div>
+
+          <div class="model-field">
+            unit_price
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         ORCHESTRATION
+         ===================================================== -->
+
+    <div class="detail-section-block">
+
+      <div class="detail-section-heading">
+        <p class="detail-label">04 / Orchestration</p>
+
+        <h3>
+          Databricks Job Workflow
+        </h3>
+
+        <p>
+          Pipeline stages are executed in dependency order so downstream
+          transformations only run after the required upstream processing succeeds.
+        </p>
+      </div>
+
+
+      <div class="job-workflow">
+
+        <div class="job-node">
+          <span>01</span>
+          <strong>Bronze Ingestion</strong>
+        </div>
+
+        <div class="job-arrow">→</div>
+
+        <div class="job-node">
+          <span>02</span>
+          <strong>Silver Transform</strong>
+        </div>
+
+        <div class="job-arrow">→</div>
+
+        <div class="job-node">
+          <span>03</span>
+          <strong>Data Quality</strong>
+        </div>
+
+        <div class="job-arrow">→</div>
+
+        <div class="job-node">
+          <span>04</span>
+          <strong>Gold Analytics</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         PROJECT FEATURES
+         ===================================================== -->
 
     <div class="project-detail-panel">
+
       <div class="detail-column">
+
         <h3>
-          Business Scope
+          Data Engineering Workflows
         </h3>
 
         <ul>
-          <li>Unified operational work item tracking across business processes</li>
-          <li>Configurable workflow states and transition rules</li>
-          <li>Role-based approval and controlled action execution</li>
-          <li>Task assignment and ownership tracking</li>
-          <li>Collaborative commenting and discussion threads</li>
-          <li>Complete audit trail of all system actions and transitions</li>
-          <li>Searchable and filterable operational work queues</li>
-          <li>Lifecycle management from creation to completion</li>
+          <li>ETL / ELT pipeline development</li>
+          <li>Incremental data ingestion</li>
+          <li>Bronze / Silver / Gold processing</li>
+          <li>Python and PySpark transformations</li>
+          <li>Spark SQL transformations</li>
+          <li>Delta Lake tables</li>
+          <li>Joins and aggregations</li>
+          <li>Deduplication and cleansing</li>
         </ul>
+
       </div>
 
+
       <div class="detail-column">
+
         <h3>
-          Technical Scope
+          Reliability & Operations
         </h3>
 
         <ul>
-          <li>Blazor WebAssembly frontend with reusable enterprise component architecture</li>
-          <li>ASP.NET Core Web API with layered Controller → Service → DB</li>
-          <li>Strongly typed DTO contracts shared across frontend and backend</li>
-          <li>Entity Framework Core Code First with SQLite migrations</li>
-          <li>Microsoft Entra ID authentication with policy-based authorization</li>
-          <li>Role-based access control for workflow actions</li>
-          <li>Serilog structured logging with audit-safe event tracking</li>
+          <li>Schema and data-type validation</li>
+          <li>Null and duplicate detection</li>
+          <li>Data quality checks</li>
+          <li>Ingestion timestamps</li>
+          <li>Historical traceability</li>
+          <li>Pipeline dependency management</li>
+          <li>Scheduled workflow execution</li>
+          <li>Analytics-ready Gold datasets</li>
         </ul>
+
       </div>
+
     </div>
+
   </div>
 </section>

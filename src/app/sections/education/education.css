@@ -1,77 +1,343 @@
 .education-section {
-  background: #080808;
-  padding: 96px 48px;
+  position: relative;
+  padding: 110px 48px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 12% 20%,
+      rgba(14, 165, 233, 0.045),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 88% 80%,
+      rgba(255, 54, 33, 0.04),
+      transparent 28%
+    ),
+    #080808;
+}
+
+.education-section *,
+.education-section *::before,
+.education-section *::after {
+  box-sizing: border-box;
 }
 
 .education-container {
+  width: 100%;
   max-width: 1120px;
   margin: 0 auto;
 }
 
-.section-eyebrow {
-  margin: 0 0 16px 0;
-  color: #9c9c9c;
-  font-size: 14px;
+.education-section .section-eyebrow {
+  margin: 0 0 12px;
+  color: #ff5b46;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-.education-container h2 {
-  max-width: 760px;
-  margin: 0 0 40px 0;
+.education-container > h2 {
+  max-width: 720px;
+  margin: 0;
   color: #ffffff;
-  font-size: 40px;
+  font-size: clamp(30px, 3.5vw, 44px);
   line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.education-intro {
+  max-width: 680px;
+  margin: 18px 0 0;
+  color: #a8aaad;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.education-group {
+  margin-top: 54px;
+}
+
+.certification-group {
+  margin-top: 64px;
+}
+
+.education-group-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.education-group-heading > span {
+  color: #ff5b46;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.education-group-heading h3 {
+  margin: 0;
+  color: #eeeeee;
+  font-size: 17px;
   font-weight: 700;
 }
 
-.degree-image-row {
+.degree-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-bottom: 36px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
-.degree-image {
+.certification-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.credential-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(19, 19, 19, 0.97),
+      rgba(8, 8, 8, 0.97)
+    );
+  border: 1px solid #272727;
+  border-radius: 14px;
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.credential-card:hover {
+  transform: translateY(-4px);
+  border-color: #3c3c3c;
+  box-shadow:
+    0 24px 65px rgba(0, 0, 0, 0.4);
+}
+
+.credential-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 54, 33, 0.7),
+      transparent
+    );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.credential-card:hover::before {
+  opacity: 1;
+}
+
+.credential-image-link {
+  display: block;
   width: 100%;
-  height: 430px;
+  height: 250px;
+  overflow: hidden;
+  background: #ffffff;
+  border-bottom: 1px solid #242424;
+}
+
+.credential-image {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
-  border: 1px solid #242424;
-  border-radius: 14px;
-  background: #101010;
+  background: #ffffff;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 
-.education-list {
-  list-style: none;
+.credential-image-link:hover .credential-image {
+  transform: scale(1.015);
+  filter: brightness(0.96);
+}
+
+.certification-preview-link {
+  height: 205px;
+}
+
+.certification-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.degree-card .credential-image-link {
+  height: 250px;
+}
+
+.degree-card .credential-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.certification-logo {
+  height: 205px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 54, 33, 0.08),
+      transparent 60%
+    ),
+    #090909;
+  border-bottom: 1px solid #242424;
+}
+
+.databricks-cert-logo img {
+  display: block;
+  width: 72px !important;
+  height: 72px !important;
+  min-width: 72px;
+  min-height: 72px;
+  max-width: 72px !important;
+  max-height: 72px !important;
+  object-fit: contain;
+  filter:
+    drop-shadow(
+      0 0 18px rgba(255, 54, 33, 0.15)
+    );
+}
+
+.credential-content {
+  padding: 22px;
+}
+
+.credential-type {
+  display: block;
+  margin-bottom: 9px;
+  color: #ff5b46;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.credential-content h4 {
   margin: 0;
-  padding: 0;
-  border-top: 1px solid #242424;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 700;
 }
 
-  .education-list li {
-    color: #c7c7c7;
-    font-size: 17px;
-    line-height: 1.6;
-    padding: 16px 0;
-    border-bottom: 1px solid #242424;
-  }
+.credential-name {
+  margin: 5px 0 0;
+  color: #d2d2d2;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.credential-issuer {
+  margin: 12px 0 0;
+  color: #999999;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.credential-date {
+  margin: 5px 0 0;
+  color: #7f7f7f;
+  font-size: 10px;
+  line-height: 1.4;
+}
 
 @media (max-width: 900px) {
   .education-section {
-    padding: 72px 24px;
+    padding: 88px 24px;
   }
 
-  .degree-image-row {
+  .certification-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .education-section {
+    padding: 72px 18px;
+  }
+
+  .education-container > h2 {
+    font-size: 30px;
+  }
+
+  .degree-grid,
+  .certification-grid {
     grid-template-columns: 1fr;
   }
 
-  .education-container h2 {
-    font-size: 32px;
+  .education-group {
+    margin-top: 42px;
   }
 
-  .degree-image {
-    height: auto;
+  .certification-group {
+    margin-top: 50px;
+  }
+
+  .degree-card .credential-image-link {
+    height: 240px;
+  }
+
+  .certification-preview-link,
+  .certification-logo {
+    height: 210px;
+  }
+
+  .credential-image,
+  .certification-image {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .education-section {
+    padding: 64px 14px;
+  }
+
+  .education-container > h2 {
+    font-size: 27px;
+  }
+
+  .credential-content {
+    padding: 19px;
+  }
+
+  .degree-card .credential-image-link {
+    height: 215px;
+  }
+
+  .certification-preview-link,
+  .certification-logo {
+    height: 185px;
   }
 }

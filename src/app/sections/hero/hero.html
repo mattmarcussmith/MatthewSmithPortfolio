@@ -1,65 +1,262 @@
 <section id="hero" class="hero-section">
-    <div class="hero-layout">
+  <div class="hero-layout">
 
-      <div class="hero-copy">
+    <!-- LEFT CONTENT -->
+    <div class="hero-copy">
 
-        <p class="hero-eyebrow">
-          .NET 8 • Blazor WebAssembly • ASP.NET Core • SQL Server • EF Core
-        </p>
+      <!-- CERTIFICATION -->
+      <div class="hero-cert hero-animate hero-delay-1">
+        <img
+          src="https://cdn.simpleicons.org/databricks/FF3621"
+          alt="Databricks"
+          class="hero-cert-icon" />
 
-        <h1>
-          Matthew Smith
-        </h1>
+        <span>Databricks Certified Data Engineer Associate</span>
+      </div>
 
-        <h2>
-          .NET Blazor Engineer
-        </h2>
+      <!-- TOP SKILLS -->
+      <div class="hero-tech-row hero-animate hero-delay-2">
 
-        <p class="hero-summary">
-          I build data-driven enterprise web applications using .NET 8, Blazor WebAssembly,
-          ASP.NET Core APIs, and SQL Server with Entity Framework Core. I focus on stable,
-          repetitive business systems such as compliance, reporting, and internal enterprise tools.
-        </p>
+        <div class="hero-tech-item">
+          <img
+            src="https://cdn.simpleicons.org/databricks/FF3621"
+            alt="Databricks"
+            class="hero-tech-icon" />
+          <span>Databricks</span>
+        </div>
 
-        <div class="hero-actions">
-          <a href="#project" class="primary-action">
-            View Projects
-          </a>
+        <div class="hero-tech-item">
+          <span class="fabric-icon">F</span>
+          <span>Microsoft Fabric</span>
+        </div>
 
-          <a href="/files/matthew-smith-resume.pdf"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="secondary-action">
-            View Resume
-          </a>
+        <div class="hero-tech-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+            alt="Python"
+            class="hero-tech-icon" />
+          <span>Python</span>
+        </div>
+
+        <div class="hero-tech-item">
+          <img
+            src="https://cdn.simpleicons.org/apachespark/E25A1C"
+            alt="Apache Spark"
+            class="hero-tech-icon" />
+          <span>Apache Spark</span>
+        </div>
+
+        <div class="hero-tech-item">
+          <img
+            src="https://cdn.simpleicons.org/delta/00ADD8"
+            alt="Delta Lake"
+            class="hero-tech-icon" />
+          <span>Delta Lake</span>
+        </div>
+
+        <div class="hero-tech-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+            alt="Microsoft SQL Server"
+            class="hero-tech-icon" />
+          <span>SQL Server</span>
         </div>
 
       </div>
 
-      <aside class="hero-card">
+      <!-- NAME -->
+      <h1 class="hero-animate hero-delay-3">
+        Matthew Smith
+      </h1>
 
-        <div class="hero-headshot-wrapper">
-          <img src="/images/matthew-smith-headshot.jpg"
-               alt="Matthew Smith professional headshot"
-               class="hero-headshot" />
-        </div>
+      <!-- ROLE -->
+      <h2 class="hero-animate hero-delay-4">
+        Data Engineer
+        <span class="hero-role-accent">
+          | Databricks + Microsoft Fabric
+        </span>
+      </h2>
 
-        <div class="credential-list">
-          <p>Interim Secret Clearance</p>
-        </div>
+      <!-- SUMMARY -->
+      <p class="hero-summary hero-animate hero-delay-5">
+        Data engineer with hands-on experience building enterprise data pipelines,
+        lakehouse workflows, and Medallion Architecture solutions using Microsoft Fabric,
+        Python, and SQL. Databricks Certified Data Engineer Associate with a software
+        engineering background in APIs, testing, CI/CD, and production support.
+      </p>
 
-        <div class="stack-card">
-          <h3>Core Stack</h3>
-          <ul>
-            <li>.NET 8 / ASP.NET Core Web API</li>
-            <li>Blazor WebAssembly (WASM)</li>
-            <li>Entity Framework Core</li>
-            <li>SQL Server</li>
-            <li>RESTful API Design</li>
-            <li>Swagger / Postman</li>
-          </ul>
+      <!-- ANIMATED PIPELINE -->
+      <div
+        class="hero-data-flow hero-animate hero-delay-6"
+        aria-label="Data engineering workflow">
+
+        <div class="data-pipeline">
+
+          <div class="pipeline-track"></div>
+          <div class="pipeline-packet"></div>
+
+          <div class="pipeline-stage stage-1">
+            <span class="stage-dot"></span>
+            <span class="stage-label">Ingest</span>
+          </div>
+
+          <div class="pipeline-stage stage-2">
+            <span class="stage-dot"></span>
+            <span class="stage-label">Transform</span>
+          </div>
+
+          <div class="pipeline-stage stage-3">
+            <span class="stage-dot"></span>
+            <span class="stage-label">Curate</span>
+          </div>
+
+          <div class="pipeline-stage stage-4">
+            <span class="stage-dot"></span>
+            <span class="stage-label">Serve</span>
+          </div>
+
         </div>
-      </aside>
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="hero-actions hero-animate hero-delay-7">
+
+        <a href="#project" class="primary-action">
+          View Data Projects
+        </a>
+
+        <a
+          href="/files/matthew-smith-resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="secondary-action">
+          View Resume
+        </a>
+
+      </div>
 
     </div>
-  </section>
+
+    <!-- RIGHT CARD -->
+    <aside class="hero-card hero-animate-card">
+
+      <!-- HEADSHOT -->
+      <div class="hero-headshot-wrapper">
+        <img
+          src="/images/matthew-smith-headshot.jpg"
+          alt="Matthew Smith professional headshot"
+          class="hero-headshot" />
+      </div>
+
+      <!-- CREDENTIALS -->
+      <div class="credential-list">
+
+        <p>
+          <span class="status-dot"></span>
+          Databricks Certified Data Engineer Associate
+        </p>
+
+        <p>
+          <span class="status-dot"></span>
+          CompTIA Security+
+        </p>
+
+        <p>
+          <span class="status-dot"></span>
+          SAFe® 6 Agilist
+        </p>
+
+      </div>
+
+      <!-- DATA STACK -->
+      <div class="stack-card">
+
+        <h3>Data Engineering Stack</h3>
+
+        <div class="stack-grid">
+
+          <div class="stack-item">
+            <img
+              src="https://cdn.simpleicons.org/databricks/FF3621"
+              alt="Databricks" />
+            <span>Databricks</span>
+          </div>
+
+          <div class="stack-item">
+            <span class="fabric-icon">F</span>
+            <span>Microsoft Fabric</span>
+          </div>
+
+          <div class="stack-item">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+              alt="Python" />
+            <span>Python</span>
+          </div>
+
+          <div class="stack-item">
+            <img
+              src="https://cdn.simpleicons.org/apachespark/E25A1C"
+              alt="Apache Spark" />
+            <span>Apache Spark</span>
+          </div>
+
+          <div class="stack-item">
+            <img
+              src="https://cdn.simpleicons.org/delta/00ADD8"
+              alt="Delta Lake" />
+            <span>Delta Lake</span>
+          </div>
+
+          <div class="stack-item">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+              alt="Microsoft SQL Server" />
+            <span>SQL Server</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ENGINEERING FOUNDATION -->
+      <div class="stack-card secondary-stack-card">
+
+        <h3>Engineering Foundation</h3>
+
+        <div class="stack-grid">
+
+          <div class="stack-item">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg"
+              alt=".NET" />
+            <span>.NET</span>
+          </div>
+
+          <div class="stack-item">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+              alt="C Sharp" />
+            <span>C#</span>
+          </div>
+
+          <div class="stack-item">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+              alt="Microsoft SQL Server" />
+            <span>SQL Server</span>
+          </div>
+
+          <div class="stack-item">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+              alt="Git" />
+            <span>Git</span>
+          </div>
+
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+</section>
