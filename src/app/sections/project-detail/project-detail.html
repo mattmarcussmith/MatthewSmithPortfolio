@@ -1,444 +1,253 @@
-<section id="project-detail" class="project-detail-section">
-  <div class="project-detail-container">
+<section id="about" class="about-section">
+  <div class="about-container">
 
     <p class="section-eyebrow">
-      Project Details
+      Professional Engineering Experience
     </p>
 
-    <!-- HEADER -->
-    <div class="project-detail-header">
+    <h2>
+      Professional Development
+    </h2>
 
-      <div class="project-detail-heading">
-        <h2 class="project-detail-title">
-          Retail Lakehouse ETL Pipeline
-        </h2>
+    <p class="about-intro">
+      My work spans enterprise .NET applications, backend services, AI-powered
+      business tools, Microsoft Fabric data pipelines, testing, deployment,
+      Azure DevOps workflows, and production support.
+    </p>
 
-        <p class="project-detail-summary">
-          An end-to-end Databricks data engineering project that ingests raw retail
-          data, transforms and validates records through Bronze and Silver layers,
-          and produces curated Gold datasets for analytics and reporting.
-        </p>
-      </div>
+    <div class="experience-list">
 
-      <!-- ONLY GITHUB -->
-      <div class="project-detail-actions">
-        <a
-          href="https://github.com/mattmarcussmith"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="primary-action">
+      <!-- ENTERPRISE APPLICATIONS -->
+      <article class="experience-item">
+        <div class="experience-number">01</div>
 
-          GitHub Repository
-        </a>
-      </div>
+        <div class="experience-content">
+          <div class="experience-heading">
+            <h3>Enterprise Business Applications</h3>
 
-    </div>
-
-
-    <!-- =====================================================
-         ARCHITECTURE
-         ===================================================== -->
-
-    <div class="detail-section-block">
-
-      <div class="detail-section-heading">
-        <p class="detail-label">01 / Architecture</p>
-
-        <h3>
-          End-to-End Data Flow
-        </h3>
-
-        <p>
-          Source datasets move through ingestion, cleansing, transformation,
-          validation, and aggregation before becoming analytics-ready datasets.
-        </p>
-      </div>
-
-
-      <div class="architecture-diagram">
-
-        <!-- SOURCES -->
-        <div class="architecture-node source-node">
-          <span class="architecture-node-number">01</span>
-
-          <strong>Source Data</strong>
-
-          <span>customers.csv</span>
-          <span>products.csv</span>
-          <span>orders.csv</span>
-        </div>
-
-
-        <div class="architecture-arrow">
-          <span>→</span>
-          <small>Ingest</small>
-        </div>
-
-
-        <!-- BRONZE -->
-        <div class="architecture-node bronze-node">
-          <span class="architecture-node-number">02</span>
-
-          <strong>Bronze</strong>
-
-          <span>Raw Delta Tables</span>
-          <span>Ingestion Timestamp</span>
-          <span>Source Preservation</span>
-        </div>
-
-
-        <div class="architecture-arrow">
-          <span>→</span>
-          <small>Transform</small>
-        </div>
-
-
-        <!-- SILVER -->
-        <div class="architecture-node silver-node">
-          <span class="architecture-node-number">03</span>
-
-          <strong>Silver</strong>
-
-          <span>Clean Records</span>
-          <span>Validate Types</span>
-          <span>Deduplicate</span>
-        </div>
-
-
-        <div class="architecture-arrow">
-          <span>→</span>
-          <small>Curate</small>
-        </div>
-
-
-        <!-- GOLD -->
-        <div class="architecture-node gold-node">
-          <span class="architecture-node-number">04</span>
-
-          <strong>Gold</strong>
-
-          <span>Sales Analytics</span>
-          <span>Customer Metrics</span>
-          <span>Product Performance</span>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         PIPELINE PROCESS
-         ===================================================== -->
-
-    <div class="detail-section-block">
-
-      <div class="detail-section-heading">
-        <p class="detail-label">02 / ETL Workflow</p>
-
-        <h3>
-          Pipeline Processing
-        </h3>
-
-        <p>
-          The project separates each major data engineering responsibility into
-          clear processing stages that can be executed and monitored independently.
-        </p>
-      </div>
-
-
-      <div class="process-grid">
-
-        <article class="process-card">
-          <span class="process-number">01</span>
-
-          <h4>Ingest</h4>
+            <span class="experience-type">
+              Full Stack
+            </span>
+          </div>
 
           <p>
-            Load source files into Bronze Delta tables while preserving raw
-            records and adding ingestion metadata.
+            Built and supported full-stack business workflows for contract bidding,
+            outreach, exploration, focus-area leadership, project management,
+            labor utilization, and other operational processes. Developed
+            configurable role-based authorization testing that allowed developers
+            to enable or disable roles through configuration and validate feature
+            access across different permission levels. Built and enhanced Telerik
+            UI for Blazor components to improve usability, consistency, and the
+            overall application experience.
           </p>
-        </article>
 
+          <div class="experience-tech">
+            <span>C#</span>
+            <span>.NET</span>
+            <span>ASP.NET Core</span>
+            <span>Blazor WebAssembly</span>
+            <span>Telerik UI</span>
+            <span>SQL Server</span>
+            <span>EF Core</span>
+            <span>Role-Based Authorization</span>
+          </div>
+        </div>
+      </article>
 
-        <article class="process-card">
-          <span class="process-number">02</span>
+      <!-- HR CHATBOT -->
+      <article class="experience-item">
+        <div class="experience-number">02</div>
 
-          <h4>Validate</h4>
+        <div class="experience-content">
+          <div class="experience-heading">
+            <h3>AI-Powered HR Chatbot</h3>
+
+            <span class="experience-type">
+              AI / RAG
+            </span>
+          </div>
 
           <p>
-            Check required fields, data types, null values, duplicate records,
-            and invalid source data.
+            Developed an enterprise HR chatbot using OpenAI, Pinecone vector
+            storage, text embeddings, and Retrieval-Augmented Generation over
+            embedded Human Resources documents. Implemented response guardrails
+            to constrain answers to approved HR content, along with escalation
+            and reporting workflows triggered by user input when requests required
+            human follow-up or could not be resolved appropriately by the chatbot.
           </p>
-        </article>
 
+          <div class="experience-tech">
+            <span>C#</span>
+            <span>ASP.NET Core</span>
+            <span>OpenAI</span>
+            <span>Pinecone</span>
+            <span>Vector Search</span>
+            <span>Embeddings</span>
+            <span>RAG</span>
+          </div>
+        </div>
+      </article>
 
-        <article class="process-card">
-          <span class="process-number">03</span>
+      <!-- JTR CHATBOT -->
+      <article class="experience-item">
+        <div class="experience-number">03</div>
 
-          <h4>Transform</h4>
+        <div class="experience-content">
+          <div class="experience-heading">
+            <h3>Joint Travel Regulations Chatbot</h3>
+
+            <span class="experience-type">
+              AI / Full Stack
+            </span>
+          </div>
 
           <p>
-            Clean records, standardize values, join related datasets, and build
-            reusable Silver tables.
+            Built a context-aware travel-policy assistant with Blazor WebAssembly,
+            ASP.NET Core, OpenAI, text embeddings, Pinecone, and Retrieval-Augmented
+            Generation to provide guidance on per diem, lodging, transportation,
+            reimbursements, allowances, and official travel-policy questions.
           </p>
-        </article>
 
+          <div class="experience-tech">
+            <span>Blazor WebAssembly</span>
+            <span>ASP.NET Core</span>
+            <span>OpenAI</span>
+            <span>Pinecone</span>
+            <span>Embeddings</span>
+            <span>RAG</span>
+          </div>
+        </div>
+      </article>
 
-        <article class="process-card">
-          <span class="process-number">04</span>
+      <!-- BACKEND -->
+      <article class="experience-item">
+        <div class="experience-number">04</div>
 
-          <h4>Aggregate</h4>
+        <div class="experience-content">
+          <div class="experience-heading">
+            <h3>Backend Services + APIs</h3>
+
+            <span class="experience-type">
+              Backend
+            </span>
+          </div>
 
           <p>
-            Create Gold datasets containing business-level metrics and
-            analytics-ready summaries.
+            Support enterprise backend services using C#, .NET, REST APIs,
+            service-layer business logic, data-access patterns, validation,
+            stored-procedure analysis, database dependencies, error-path analysis,
+            and database-backed application workflows. Troubleshoot production
+            issues using Visual Studio, root-cause analysis, and documented
+            resolution workflows.
           </p>
-        </article>
 
-      </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         DATA MODEL
-         ===================================================== -->
-
-    <div class="detail-section-block">
-
-      <div class="detail-section-heading">
-        <p class="detail-label">03 / Data Modeling</p>
-
-        <h3>
-          Retail Analytics Model
-        </h3>
-
-        <p>
-          The curated layer uses a simple analytics model centered around order
-          facts with customer and product dimensions.
-        </p>
-      </div>
-
-
-      <div class="data-model">
-
-        <!-- CUSTOMER -->
-        <div class="model-table dimension-table">
-
-          <div class="model-table-header">
-            dim_customer
+          <div class="experience-tech">
+            <span>C#</span>
+            <span>.NET</span>
+            <span>REST APIs</span>
+            <span>SQL</span>
+            <span>Stored Procedures</span>
+            <span>Visual Studio</span>
+            <span>Production Support</span>
           </div>
-
-          <div class="model-field primary-key">
-            customer_id
-            <span>PK</span>
-          </div>
-
-          <div class="model-field">
-            customer_name
-          </div>
-
-          <div class="model-field">
-            email
-          </div>
-
-          <div class="model-field">
-            region
-          </div>
-
         </div>
+      </article>
 
+      <!-- FABRIC -->
+      <article class="experience-item">
+        <div class="experience-number">05</div>
 
-        <!-- RELATIONSHIP -->
-        <div class="model-relationship">
-          <span>1</span>
+        <div class="experience-content">
+          <div class="experience-heading">
+            <h3>Microsoft Fabric Data Platform</h3>
 
-          <div class="relationship-line"></div>
+            <span class="experience-type">
+              Data Engineering
+            </span>
+          </div>
 
-          <span>∞</span>
+          <p>
+            Built and maintained Bronze, Silver, and Gold data workflows for
+            ingestion, synchronization, transformation, reporting, historical
+            traceability, and scheduled end-to-end processing. Developed Python
+            ingestion logic with timestamps to preserve history and support
+            repeatable downstream synchronization, and automated reporting delivery
+            through external API integration.
+          </p>
+
+          <div class="experience-tech">
+            <span>Microsoft Fabric</span>
+            <span>Python</span>
+            <span>SQL</span>
+            <span>Medallion Architecture</span>
+            <span>Data Pipelines</span>
+            <span>API Integration</span>
+          </div>
         </div>
+      </article>
 
+      <!-- DEVOPS -->
+      <article class="experience-item">
+        <div class="experience-number">06</div>
 
-        <!-- FACT -->
-        <div class="model-table fact-table">
+        <div class="experience-content">
+          <div class="experience-heading">
+            <h3>DevOps + Delivery Workflows</h3>
 
-          <div class="model-table-header">
-            fact_orders
+            <span class="experience-type">
+              Delivery
+            </span>
           </div>
 
-          <div class="model-field primary-key">
-            order_id
-            <span>PK</span>
-          </div>
+          <p>
+            Use GitHub Actions to automate build and deployment workflows to
+            Azure Static Web Apps from push and pull-request activity. Use Azure
+            DevOps for backlog and work-item workflows, configure alerts for
+            critical help-desk tickets, and facilitate the team board when the
+            Scrum lead is unavailable.
+          </p>
 
-          <div class="model-field foreign-key">
-            customer_id
-            <span>FK</span>
+          <div class="experience-tech">
+            <span>GitHub Actions</span>
+            <span>CI/CD</span>
+            <span>Azure Static Web Apps</span>
+            <span>Azure DevOps</span>
+            <span>Work Items</span>
+            <span>Agile Delivery</span>
           </div>
-
-          <div class="model-field foreign-key">
-            product_id
-            <span>FK</span>
-          </div>
-
-          <div class="model-field">
-            order_date
-          </div>
-
-          <div class="model-field">
-            quantity
-          </div>
-
-          <div class="model-field">
-            unit_price
-          </div>
-
-          <div class="model-field">
-            sales_amount
-          </div>
-
         </div>
+      </article>
 
+      <!-- TESTING -->
+      <article class="experience-item">
+        <div class="experience-number">07</div>
 
-        <!-- RELATIONSHIP -->
-        <div class="model-relationship">
-          <span>∞</span>
+        <div class="experience-content">
+          <div class="experience-heading">
+            <h3>Testing + Production Support</h3>
 
-          <div class="relationship-line"></div>
-
-          <span>1</span>
-        </div>
-
-
-        <!-- PRODUCT -->
-        <div class="model-table dimension-table">
-
-          <div class="model-table-header">
-            dim_product
+            <span class="experience-type">
+              Operations
+            </span>
           </div>
 
-          <div class="model-field primary-key">
-            product_id
-            <span>PK</span>
+          <p>
+            Validate application behavior in staging environments, exercise
+            end-to-end user workflows, inspect application state through browser
+            development tools, troubleshoot defects with Visual Studio, perform
+            root-cause analysis, and document production issues and resolutions.
+          </p>
+
+          <div class="experience-tech">
+            <span>Functional Testing</span>
+            <span>Staging Validation</span>
+            <span>Debugging</span>
+            <span>Browser DevTools</span>
+            <span>Production Support</span>
+            <span>Root-Cause Analysis</span>
           </div>
-
-          <div class="model-field">
-            product_name
-          </div>
-
-          <div class="model-field">
-            category
-          </div>
-
-          <div class="model-field">
-            unit_price
-          </div>
-
         </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         ORCHESTRATION
-         ===================================================== -->
-
-    <div class="detail-section-block">
-
-      <div class="detail-section-heading">
-        <p class="detail-label">04 / Orchestration</p>
-
-        <h3>
-          Databricks Job Workflow
-        </h3>
-
-        <p>
-          Pipeline stages are executed in dependency order so downstream
-          transformations only run after the required upstream processing succeeds.
-        </p>
-      </div>
-
-
-      <div class="job-workflow">
-
-        <div class="job-node">
-          <span>01</span>
-          <strong>Bronze Ingestion</strong>
-        </div>
-
-        <div class="job-arrow">→</div>
-
-        <div class="job-node">
-          <span>02</span>
-          <strong>Silver Transform</strong>
-        </div>
-
-        <div class="job-arrow">→</div>
-
-        <div class="job-node">
-          <span>03</span>
-          <strong>Data Quality</strong>
-        </div>
-
-        <div class="job-arrow">→</div>
-
-        <div class="job-node">
-          <span>04</span>
-          <strong>Gold Analytics</strong>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         PROJECT FEATURES
-         ===================================================== -->
-
-    <div class="project-detail-panel">
-
-      <div class="detail-column">
-
-        <h3>
-          Data Engineering Workflows
-        </h3>
-
-        <ul>
-          <li>ETL / ELT pipeline development</li>
-          <li>Incremental data ingestion</li>
-          <li>Bronze / Silver / Gold processing</li>
-          <li>Python and PySpark transformations</li>
-          <li>Spark SQL transformations</li>
-          <li>Delta Lake tables</li>
-          <li>Joins and aggregations</li>
-          <li>Deduplication and cleansing</li>
-        </ul>
-
-      </div>
-
-
-      <div class="detail-column">
-
-        <h3>
-          Reliability & Operations
-        </h3>
-
-        <ul>
-          <li>Schema and data-type validation</li>
-          <li>Null and duplicate detection</li>
-          <li>Data quality checks</li>
-          <li>Ingestion timestamps</li>
-          <li>Historical traceability</li>
-          <li>Pipeline dependency management</li>
-          <li>Scheduled workflow execution</li>
-          <li>Analytics-ready Gold datasets</li>
-        </ul>
-
-      </div>
+      </article>
 
     </div>
 
